@@ -357,7 +357,7 @@
   padding-top: 12px;
   box-shadow: none;
 }
-#viewform #edit-data-i-vremya .form-item input ~ label {
+#viewform #edit-data-i-vremya .form-item label {
   display: block;
   top: 6px;
   transform: translateY(0%);
@@ -420,7 +420,7 @@
   align-items: center;
   background: #f7f6fb;
   border-radius: 4px;
-  padding: 4px 2px;
+  padding: 4px;
 }
 #viewform .webform-custom-options-buttons .webform-custom-options-button {
   width: calc(100% - 4px);
@@ -429,10 +429,14 @@
   font-size: 15px;
   color: #5947b3;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
 }
 #viewform .webform-custom-options-buttons .webform-custom-options-button[aria-checked='true'] {
   color: #333333;
-  background: #e9e6fa;
+  background: #e9e6fa !important;
   border-radius: 4px;
 }
 
