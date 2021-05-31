@@ -415,6 +415,10 @@
   color: #333;
 }
 
+#viewform .webform-options-custom--buttons legend {
+  display: none;
+}
+
 #viewform .webform-custom-options-buttons {
   display: flex;
   align-items: center;
@@ -422,6 +426,7 @@
   border-radius: 4px;
   padding: 4px;
 }
+
 #viewform .webform-custom-options-buttons .webform-custom-options-button {
   width: calc(100% - 4px);
   margin: 0 2px;
