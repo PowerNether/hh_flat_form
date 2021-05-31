@@ -293,12 +293,7 @@
 #viewform .form-item-kommentariy label {
   top: 6px;
   transform: translateY(0%);
-}
-
-#viewform .form-item-kommentariy div:focus .edit-kommentariy {
-  top: 6px;
-  transform: translateY(0%);
-  visibility: visible;
+  font-size: 11px;
 }
 
 #viewform .form-item {
