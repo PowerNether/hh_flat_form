@@ -2372,6 +2372,10 @@
   left: 0;
   top: 0;
   z-index: 1;
+  cursor: pointer;
+}
+.tp-235 #photo-slider .tns-outer:before:hover {
+  background: rgba(15, 10, 37, 0.5);
 }
 .tp-235 #photo-slider .tns-outer:after {
   background: rgba(15, 10, 37, 0.4);
@@ -2383,6 +2387,7 @@
   right: 0;
   top: 0;
   z-index: 1;
+  cursor: pointer;
 }
 .slider-full .slidercar .item img {
   width: 680px;

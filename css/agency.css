@@ -225,12 +225,12 @@
 
 #viewform input[type='text']:focus {
   background: #f7f6fb;
-  border: 1px solid #aca3d9;
+  border: 1px solid #aca3d9 !important;
   padding: 10px 12px 0 !important;
 }
 #viewform input[type='text']:valid {
   background: #f7f6fb;
-  border: 1px solid #aca3d9;
+  border: 1px solid #aca3d9 !important;
   padding: 10px 12px 0 !important;
 }
 #viewform input[type='text']:valid ~ label {
@@ -286,7 +286,7 @@
 
 #viewform textarea:focus {
   background: #f7f6fb;
-  border: 1px solid #aca3d9;
+  border: 1px solid #aca3d9 !important;
   outline: none;
 }
 
@@ -336,25 +336,32 @@
 #viewform #edit-data-i-vremya {
   display: flex;
 }
-
+#viewform .form-item-data-i-vremya label {
+  display: none;
+}
 #viewform #edit-data-i-vremya .form-item {
   width: 50%;
   margin-bottom: 0;
 }
 
 #viewform #edit-data-i-vremya .form-item input {
-  padding: 0 12px 0 12px;
+  padding: 12px 12px 0 12px;
+  margin-bottom: 0;
+  height: 46px;
+  border: 1px solid #cccccc;
 }
 
 #viewform #edit-data-i-vremya .form-item input:focus {
   background: #f7f6fb;
   border: 1px solid #aca3d9;
   padding-top: 12px;
+  box-shadow: none;
 }
-
-#viewform #edit-data-i-vremya .form-item input:focus ~ label {
-  opacity: 1;
-  visibility: visible;
+#viewform #edit-data-i-vremya .form-item input ~ label {
+  display: block;
+  top: 6px;
+  transform: translateY(0%);
+  font-size: 11px;
 }
 
 #viewform #edit-data-i-vremya .form-item:first-of-type input {
@@ -446,7 +453,20 @@
   font-weight: bold;
   margin: 0;
 }
-
+#viewform .form-actions {
+  float: left;
+  width: auto;
+}
+#viewform .form-actions input[type='submit'] {
+  display: block;
+  margin: 0 !important;
+  width: auto;
+}
+#viewform #edit-processed-text-01.js-form-item {
+  display: inline-block;
+  padding-left: 24px;
+  max-width: 250px;
+}
 #viewform #edit-processed-text-01 {
   font-size: 13px;
   line-height: 18px;
@@ -475,9 +495,17 @@
   #viewform #edit-actions #edit-actions-submit {
     width: 100%;
   }
-
-  #viewform #edit-processed-text-01 {
+  #viewform .form-actions {
+    float: none;
+    width: 100%;
+  }
+  #viewform .form-actions input[type='submit'] {
+    width: 100%;
+  }
+  #viewform #edit-processed-text-01.js-form-item {
+    display: inline-block;
     padding: 15px 0px 15px;
+    max-width: 100%;
   }
 }
 
