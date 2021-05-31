@@ -447,6 +447,7 @@
   visibility: visible;
   opacity: 0;
   pointer-events: all;
+  cursor: pointer;
 }
 #viewform .webform-custom-options-buttons .webform-custom-options-button label {
   position: relative;
