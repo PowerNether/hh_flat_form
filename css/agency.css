@@ -224,23 +224,23 @@
   pointer-events: none;
 }
 
-#viewform input:focus {
+#viewform input[type='text']:focus {
   background: #f7f6fb;
   border: 1px solid #aca3d9;
   padding: 10px 12px 0 !important;
 }
-#viewform input:valid {
+#viewform input[type='text']:valid {
   background: #f7f6fb;
   border: 1px solid #aca3d9;
   padding: 10px 12px 0 !important;
 }
-#viewform input:valid ~ label {
+#viewform input[type='text']:valid ~ label {
   top: 6px;
   transform: translateY(0%);
   visibility: visible;
 }
 
-#viewform input:focus ~ label {
+#viewform input[type='text']:focus ~ label {
   top: 6px;
   transform: translateY(0%);
   visibility: visible;
