@@ -193,14 +193,14 @@
   color: #333;
 }
 
-#viewform input {
+#viewform input[type='text'] {
   padding: 0 40px 0 12px;
   height: 46px !important;
   border-radius: 4px;
   position: relative;
 }
 
-#viewform input::placeholder {
+#viewform input[type='text']::placeholder {
   font-size: 15px;
   color: #b0b0b0;
 }
