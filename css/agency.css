@@ -209,13 +209,12 @@
   width: auto;
   height: auto;
   clip: auto;
-  overflow: auto;
   word-wrap: normal;
   z-index: 1;
   position: absolute;
   top: 50%;
   left: 13px;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 11px;
   color: #808080;
   transform: translateY(-50%);
@@ -238,12 +237,14 @@
   top: 6px;
   transform: translateY(0%);
   visibility: visible;
+  font-size: 11px;
 }
 
 #viewform input[type='text']:focus ~ label {
   top: 6px;
   transform: translateY(0%);
   visibility: visible;
+  font-size: 11px;
 }
 
 #viewform .form-item-phonenumber input:hover {
@@ -254,6 +255,7 @@
   top: 6px;
   transform: translateY(0%);
   visibility: visible;
+  font-size: 11px;
 }
 
 #viewform .form-reset__icon {
