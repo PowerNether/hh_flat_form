@@ -4737,26 +4737,20 @@
                             id="edit-vybrat-pokupatel-broker" data-select-hidden="">
                             <legend> <span class="fieldset-legend">Покупатель или Брокер</span></legend>
                             <div class="fieldset-wrapper">
-                                <div
-                                    class="js-form-item form-item js-form-type-select form-item-vybrat-pokupatel-broker-select js-form-item-vybrat-pokupatel-broker-select form-no-label">
-                                    <label for="edit-vybrat-pokupatel-broker-select" class="visually-hidden">Покупатель
-                                        или Брокер</label> <select
-                                        data-drupal-selector="edit-vybrat-pokupatel-broker-select"
-                                        id="edit-vybrat-pokupatel-broker-select" name="vybrat_pokupatel_broker[select]"
-                                        class="form-select" tabindex="-1">
-                                        <option value="" selected="selected">- Не указано -</option>
-                                        <option value="Я покупатель">Я покупатель</option>
-                                        <option value="Я брокер">Я брокер</option>
-                                    </select>
-                                </div>
                                 <div class="webform-options-custom-template">
                                     <div class="webform-custom-options-buttons">
-                                        <div class="webform-custom-options-button" data-option-value="Я покупатель"
-                                            style="text-align:center" role="checkbox" aria-checked="false" tabindex="0">
-                                            Я покупатель</div>
-                                        <div class="webform-custom-options-button" data-option-value="Я брокер"
-                                            style="text-align:center" role="checkbox" aria-checked="false"
-                                            tabindex="-1"> Я брокер</div>
+                                        <div class="webform-custom-options-button hidden">
+                                            <input type="radio" name="broker" id="i" value="Не указано" checked>
+                                            <label for="broker">Не указано</label>
+                                        </div>
+                                        <div class="webform-custom-options-button">
+                                            <input type="radio" name="broker" id="i" value="Я покупатель">
+                                            <label for="broker">Я покупатель</label>
+                                        </div>
+                                        <div class="webform-custom-options-button">
+                                            <input type="radio" name="broker" id="i" value="Я брокер">
+                                            <label for="broker">Я брокер</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
