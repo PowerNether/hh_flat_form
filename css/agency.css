@@ -731,3 +731,13 @@
   border: none;
   color: #333333;
 }
+.modal-header .close {
+  background: url('./../close.svg') center no-repeat;
+  background-size: contain;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
