@@ -177,6 +177,16 @@
   width: 480px;
   border-radius: 4px;
 }
+#viewform div[data-drupal-messages] {
+  display: block !important;
+}
+#viewform div[data-drupal-messages] li {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+}
 #viewform .modal-header .title {
   margin: 0 0 16px;
   font-size: 22px;
@@ -239,42 +249,86 @@
   visibility: visible;
   font-size: 11px;
 }
-
 #viewform input[type='text']:focus ~ label {
   top: 6px;
   transform: translateY(0%);
   visibility: visible;
   font-size: 11px;
 }
-
 #viewform .form-item-phonenumber input:hover {
   padding: 10px 12px 0 !important;
 }
-
+#viewform .form-item-phonenumber input::placeholder {
+  font-size: 0;
+}
+#viewform .form-item-phonenumber input:not(:placeholder-shown) {
+  padding: 10px 12px 0 !important;
+}
+#viewform .form-item-phonenumber input:not(:placeholder-shown) ~ label {
+  top: 6px;
+  transform: translateY(0%);
+  visibility: visible;
+  font-size: 11px;
+}
+#viewform .form-item-phonenumber input:hover::placeholder {
+  font-size: 16px;
+}
 #viewform .form-item-phonenumber input:hover ~ label {
   top: 6px;
   transform: translateY(0%);
   visibility: visible;
   font-size: 11px;
 }
-
 #viewform .form-reset__icon {
   display: block;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 12px;
-  background: url('./../image/x-circle-fill.svg') center / contain no-repeat;
+  background: url('../image/x-circle-fill.svg') center / contain no-repeat;
   width: 16px;
   height: 16px;
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
 }
-
 #viewform input:focus ~ .form-reset__icon {
   opacity: 1;
   visibility: visible;
+}
+#viewform .form-item-typemessage img {
+  width: 24px;
+  height: 24px;
+}
+#viewform .form-item-typemessage p {
+  font-size: 11px;
+  line-height: 12px;
+  color: #333333;
+}
+#viewform .form-item-typemessage ul {
+  background: #f7f6fb;
+  border-radius: 4px;
+  padding: 4px 2px;
+}
+#viewform .form-item-typemessage ul li {
+  margin: 0 2px;
+  width: calc(25% - 4px);
+  text-align: center;
+  cursor: pointer;
+}
+
+#viewform .form-item-typemessage ul li .thumbnail {
+  border-radius: 4px;
+  padding: 10px 12px;
+  border: 0px;
+}
+
+#viewform .form-item-typemessage ul li .selected {
+  background: #e9e6fa;
+}
+
+#viewform .form-item-typemessage select.webform-image-select {
+  display: none;
 }
 
 #viewform textarea {
@@ -296,7 +350,8 @@
   font-size: 11px;
 }
 
-#viewform .form-item {
+#viewform .form-item,
+#viewform .fieldgroup {
   position: relative;
   margin: 0px 0px 16px;
 }
@@ -333,43 +388,55 @@
   border-radius: 4px;
 }
 
-#viewform #edit-data-i-vremya {
+#viewform .form-item-data-i-vremya .container-inline {
   display: flex;
 }
 #viewform .form-item-data-i-vremya label {
   display: none;
 }
-#viewform #edit-data-i-vremya .form-item {
+#viewform .form-item-data-i-vremya .container-inline .form-item {
   width: 50%;
   margin-bottom: 0;
 }
 
-#viewform #edit-data-i-vremya .form-item input {
+#viewform .form-item-data-i-vremya .container-inline .form-item input {
   padding: 12px 12px 0 12px;
   margin-bottom: 0;
   height: 46px;
   border: 1px solid #cccccc;
 }
 
-#viewform #edit-data-i-vremya .form-item input:focus {
+#viewform .form-item-data-i-vremya .container-inline .form-item input:focus {
   background: #f7f6fb;
   border: 1px solid #aca3d9;
   padding-top: 12px;
   box-shadow: none;
 }
-#viewform #edit-data-i-vremya .form-item label {
+#viewform .form-item-data-i-vremya .container-inline .form-item label {
   display: block;
   top: 6px;
   transform: translateY(0%);
   font-size: 11px;
 }
 
-#viewform #edit-data-i-vremya .form-item:first-of-type input {
+#viewform .form-item-data-i-vremya .container-inline .form-item:first-of-type input {
   border-radius: 4px 0 0 4px;
   border-right: 0px;
 }
-#viewform #edit-data-i-vremya .form-item:last-of-type input {
+#viewform .form-item-data-i-vremya .container-inline .form-item:last-of-type input {
   border-radius: 0 4px 4px 0;
+}
+
+#viewform .form-item-typemessage label {
+  position: relative;
+  left: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  font-size: 12px;
+  line-height: 14px;
+  color: #333333;
+  margin-bottom: 0;
 }
 
 #viewform .form-item-udobnaya-forma-svyazi img {
@@ -419,15 +486,17 @@
   display: none;
 }
 
-#viewform .webform-custom-options-buttons {
+#viewform .webform-options-display-one-column {
   display: flex;
   align-items: center;
   background: #f7f6fb;
   border-radius: 4px;
   padding: 4px;
 }
-
-#viewform .webform-custom-options-buttons .webform-custom-options-button {
+#viewform .webform-options-display-one-column .webform-options-display-one-column {
+  width: 100%;
+}
+#viewform .webform-options-display-one-column .form-item {
   width: calc(100% - 4px);
   margin: 0 2px;
   font-size: 15px;
@@ -440,7 +509,7 @@
   text-align: center;
   position: relative;
 }
-#viewform .webform-custom-options-buttons .webform-custom-options-button input[type='radio'] {
+#viewform .webform-options-display-one-column .form-item input[type='radio'] {
   position: absolute;
   left: 0;
   right: 0;
@@ -454,7 +523,7 @@
   pointer-events: all;
   cursor: pointer;
 }
-#viewform .webform-custom-options-buttons .webform-custom-options-button label {
+#viewform .webform-options-display-one-column .form-item label {
   position: relative;
   left: auto;
   top: auto;
@@ -465,29 +534,12 @@
   transition: all 0.35s;
   color: #5947b3;
 }
-#viewform .webform-custom-options-buttons .webform-custom-options-button input[type='radio']:checked ~ label {
+#viewform .webform-options-display-one-column .form-item input[type='radio']:checked ~ label {
   color: #333333;
   background: #e9e6fa !important;
   border-radius: 4px;
 }
 
-#viewform #edit-actions {
-  width: 128px;
-  float: left;
-}
-
-#viewform #edit-actions #edit-actions-submit {
-  width: 128px;
-}
-
-#viewform #edit-actions .button {
-  line-height: 46px;
-  padding: 0 24px;
-  background: rgba(85, 64, 181, 1);
-  font-size: 15px;
-  font-weight: bold;
-  margin: 0;
-}
 #viewform .form-actions {
   float: left;
   width: auto;
@@ -496,17 +548,18 @@
   display: block;
   margin: 0 !important;
   width: auto;
+  height: 46px !important;
+  line-height: 46px !important;
 }
-#viewform #edit-processed-text-01.js-form-item {
+#viewform .textformadop {
   display: inline-block;
   padding-left: 24px;
   max-width: 250px;
-}
-#viewform #edit-processed-text-01 {
   font-size: 13px;
   line-height: 18px;
   color: #808080;
-  padding: 5px 0 5px 152px;
+  padding: 5px 0 5px 24px;
+  margin: 0;
 }
 
 #viewform #edit-processed-text-01 p {
@@ -515,10 +568,6 @@
 
 #viewform #edit-processed-text-01 a {
   color: #5947b3;
-}
-
-#viewform #edit-processed-text-01.js-form-item {
-  margin: 0px 0px;
 }
 
 @media (max-width: 767.98px) {

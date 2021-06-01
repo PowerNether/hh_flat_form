@@ -1177,7 +1177,7 @@
   margin-right: 40px;
   position: relative;
   width: calc((100% - 80px) / 3);
-  min-height: 100px;
+  height: 100px;
 }
 .npc .mi .lc .c.h .flat .i {
   padding: 20px 0;

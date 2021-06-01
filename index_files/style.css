@@ -1129,7 +1129,7 @@ header .social li.yt a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(13,10,26,0.65) 20%, rgba(13,10,26,0) 100%);
+    background: linear-gradient(0deg, rgba(13,10,26,0.15) 20%, rgba(13,10,26,0) 100%);
     z-index: 2;
     border-radius: 4px;
 }
@@ -3262,6 +3262,9 @@ h1 {
 	font-weight: 600;
 	color: #FF5050;
 }
+.page-xml-validator .error-block-list strong {
+	font-weight: 600;
+}
 .page-xml-validator .error-block-list .title-box {
 	font-weight: 600;
 	margin: 0 0 5px;
@@ -4363,6 +4366,7 @@ h1 {
 .price-box {
 	overflow: hidden;
     text-align: right;
+	font-feature-settings: 'tnum';
 }
 .price-box .old {
     font-size: 22px;
