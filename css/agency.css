@@ -406,26 +406,53 @@
   height: 46px;
   border: 1px solid #cccccc;
 }
-
-#viewform .form-item-data-i-vremya .container-inline .form-item input:focus {
-  background: #f7f6fb;
-  border: 1px solid #aca3d9;
-  padding-top: 12px;
-  box-shadow: none;
+#viewform .form-item-data-i-vremya .container-inline .form-item input::placeholder {
+  font-size: 0;
 }
 #viewform .form-item-data-i-vremya .container-inline .form-item label {
   display: block;
+  overflow: visible;
+}
+#viewform .form-item-data-i-vremya .container-inline .form-item input:valid {
+  background: none;
+  border: 1px solid #cccccc !important;
+  padding: 0 12px 0 !important;
+}
+#viewform .form-item-data-i-vremya .container-inline .form-item input:valid ~ label {
+  top: 50%;
+  transform: translateY(-50%);
+  visibility: visible;
+  font-size: 15px;
+}
+#viewform .form-item-data-i-vremya .container-inline .form-item input:focus {
+  background: #f7f6fb;
+  border: 1px solid #aca3d9 !important;
+  padding: 10px 12px 0 !important;
+  box-shadow: none;
+}
+#viewform .form-item-data-i-vremya .container-inline .form-item input:not(:placeholder-shown) {
+  background: #f7f6fb !important;
+  border: 1px solid #aca3d9 !important;
+  padding: 10px 12px 0 !important;
+  box-shadow: none !important;
+}
+#viewform .form-item-data-i-vremya .container-inline .form-item input:focus ~ label {
   top: 6px;
   transform: translateY(0%);
   font-size: 11px;
 }
+#viewform .form-item-data-i-vremya .container-inline .form-item input:not(:placeholder-shown) ~ label {
+  top: 6px !important;
+  transform: translateY(0%) !important;
+  font-size: 11px !important;
+}
 
 #viewform .form-item-data-i-vremya .container-inline .form-item:first-of-type input {
-  border-radius: 4px 0 0 4px;
-  border-right: 0px;
+  border-radius: 4px 0 0 4px !important;
+  border-right: 0px !important;
 }
 #viewform .form-item-data-i-vremya .container-inline .form-item:last-of-type input {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0 !important;
 }
 
 #viewform .form-item-typemessage label {
@@ -481,6 +508,10 @@
 #viewform .form-item-kommentariy textarea#edit-kommentariy.form-textarea {
   border-color: #ccc;
   color: #333;
+}
+#viewform .form-item-kommentariy textarea#edit-kommentariy.form-textarea:not(:placeholder-shown) {
+  background: #f7f6fb !important;
+  border: 1px solid #aca3d9 !important;
 }
 
 #viewform .webform-options-custom--buttons legend {
@@ -571,6 +602,9 @@
   color: #5947b3;
 }
 
+.ui-timepicker-standard {
+  z-index: 9999 !important;
+}
 @media (max-width: 767.98px) {
   #viewform #edit-actions {
     width: 100%;
@@ -647,4 +681,25 @@
     font-size: 15px;
     line-height: 24px;
   }
+}
+.ui-timepicker-container {
+  border-radius: 4px;
+}
+.ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar {
+  width: 7.5px;
+}
+.ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar-track {
+  background: none;
+}
+.ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+.ui-timepicker-container .ui-timepicker .ui-timepicker-viewport .ui-menu-item .ui-state-hover {
+  background: #f7f6fb;
+  border: 1px solid #aca3d9;
+  border-radius: 4px;
 }

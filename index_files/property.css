@@ -18,7 +18,9 @@
   z-index: 1;
 }
 .npc .npcti {
-  margin-bottom: 24px;
+  margin-bottom:  16px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid #EBEBEB;
 }
 .npc .address-box {
   position: relative;
@@ -109,6 +111,76 @@
 .npc .npcti .right-info .c:hover {
   background: #fff;
   color: #5947b3;
+}
+/* top buttons */
+.npc .tip {
+  margin: 0 0 24px;
+}
+.npc .tip .box-5,
+.npc .tip .box-7 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.npc .tip a,
+.npc .tip .box-7 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #CDC7E8;
+  border-radius: 4px;
+  height: 28px;
+  line-height: 26px;
+  font-size: 13px;
+  color: #5947B3;
+  padding: 0 9px;
+  margin-right: 8px;
+  position: relative;
+}
+.npc .tip .box-7 > div {
+  margin: 0 0 0 8px;
+}
+.npc .tip .box-7 {
+  flex-direction: row-reverse;
+}
+.npc .tip a:hover {
+  color:  #fff;
+  background: #5947B3;
+}
+.npc .tip a.present:before {
+  content: '';
+  width: 10px;
+  height: 100%;
+  line-height: 100%;
+  -webkit-mask: url(../i/icons/present.svg) 65% 50% no-repeat;
+  mask: url(../i/icons/present.svg) 65% 50% no-repeat;
+  background-size: 13px;
+  background: #5947B3;
+  display: inline-block;
+  margin: 0 8px 0 0;
+}
+.npc .tip a.map:before {
+  content: '';
+  width: 14px;
+  height: 100%;
+  line-height: 100%;
+  -webkit-mask: url(../i/icons/location.svg) 65% 50% no-repeat;
+  mask: url(../i/icons/location.svg) 65% 50% no-repeat;
+  background-size: 13px;
+  background: #5947B3;
+  display: inline-block;
+  margin: 0 8px 0 0;
+}
+.npc .tip a:hover:before {
+  background: #fff !important;
+}
+.npc .tip a.present .size {
+  color: #999;
+  margin-left:  6px;
+  display: inline-block;
+}
+.npc .tip a.present:hover .size {
+  color: #eee;
 }
 /* top info */
 .npc .pti {
