@@ -607,3 +607,44 @@
   margin: 15px auto;
   font-size: 20px;
 }
+.webform-confirmation .webform-confirmation__message {
+  padding: 40px 0;
+}
+.webform-confirmation .webform-confirmation__message img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto 16px;
+}
+.webform-confirmation .webform-confirmation__message .txt-1 {
+  display: block;
+  margin: 0 auto 16px;
+  max-width: 385px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 28px;
+  color: #333333;
+  font-weight: 600;
+}
+.webform-confirmation .webform-confirmation__message .txt-2 {
+  display: block;
+  margin: 0 auto;
+  max-width: 385px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 24px;
+  color: #333333;
+}
+
+@media (max-width: 767.98px) {
+  .webform-confirmation .webform-confirmation__message .txt-1 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .webform-confirmation .webform-confirmation__message .txt-2 {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
