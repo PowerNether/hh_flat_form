@@ -345,9 +345,7 @@
 }
 
 #viewform .form-item-kommentariy label {
-  top: 6px;
-  transform: translateY(0%);
-  font-size: 11px;
+  display: none;
 }
 
 #viewform .form-item,
@@ -388,6 +386,9 @@
   border-radius: 4px;
 }
 
+#viewform .form-item-data-i-vremya {
+  margin-bottom: 24px;
+}
 #viewform .form-item-data-i-vremya .container-inline {
   display: flex;
 }
