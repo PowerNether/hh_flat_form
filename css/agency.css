@@ -683,8 +683,9 @@
   }
 }
 .ui-timepicker-container {
+  border: 0px;
+  box-shadow: 0px 4px 10px rgba(37, 36, 41, 0.15);
   border-radius: 4px;
-  border: 1px solid #ebebeb;
 }
 .ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar {
   width: 7.5px;
