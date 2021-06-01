@@ -684,12 +684,13 @@
 }
 .ui-timepicker-container {
   border-radius: 4px;
+  border: 1px solid #ebebeb;
 }
 .ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar {
   width: 7.5px;
 }
 .ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar-track {
-  background: none;
+  background: rgba(0, 0, 0, 0);
 }
 .ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.25);
@@ -697,6 +698,9 @@
 }
 .ui-timepicker-container .ui-timepicker .ui-timepicker-viewport::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.35);
+}
+.ui-timepicker-container .ui-timepicker .ui-timepicker-viewport .ui-menu-item .ui-corner-all {
+  margin-right: 10px;
 }
 .ui-timepicker-container .ui-timepicker .ui-timepicker-viewport .ui-menu-item .ui-state-hover {
   background: #f7f6fb;
